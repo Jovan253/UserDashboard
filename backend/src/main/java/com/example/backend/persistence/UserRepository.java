@@ -1,0 +1,10 @@
+package com.example.backend.persistence;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+// allows us to get our user entity by id
+@Repository
+public interface UserRepository extends JpaRepository<UserEntity, Integer> {
+    UserEntity getUserEntityById(Integer id);
+}
